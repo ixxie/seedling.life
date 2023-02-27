@@ -8,8 +8,11 @@
 	import Info from './Info.svelte';
 
 	let element: HTMLElement;
+	let outerWidth: number;
 	$: slides = element ? Object.values(element.children) : [];
 	$: slugs = slides.map((s) => `#${s.id}`);
+	$: count = slugs.length;
+	$: slideWidth = element?.scrollWidth / count;
 
 	$: activeSlug = $page.url.hash || slugs[0];
 	$: active = slugs.indexOf(activeSlug);
@@ -33,6 +36,13 @@
 			prevSlide();
 		} else if (direction == 'left') {
 			nextSlide();
+		}
+	}
+
+	function handleScroll() {
+		let scroll = element?.scrollLeft;
+		if (scroll % slideWidth == 0) {
+			goto(slugs[scroll / slideWidth]);
 		}
 	}
 
@@ -66,13 +76,14 @@
 	};
 </script>
 
-<svelte:window on:keydown={handleKeydown} />
+<svelte:window on:keydown={handleKeydown} bind:outerWidth />
 
 <Info />
 <article
 	bind:this={element}
-	use:swipe={{ timeframe: 300, minSwipeDistance: 100, touchAction: 'pan-y' }}
+	use:swipe={{ timeframe: 300, minSwipeDistance: 100, touchAction: 'scroll-y' }}
 	on:swipe={handleSwipe}
+	on:scroll={handleScroll}
 >
 	<slot />
 </article>
