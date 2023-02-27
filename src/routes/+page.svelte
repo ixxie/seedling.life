@@ -149,7 +149,7 @@
 			your options since they lock you into one model.
 		</p>
 	</Slide>
-	<Slide slug="appendices">
+	<Slide slug="opinion">
 		<div class="column" style="height: 100%; justify-content: center;">
 			<span class="pretitle">a different take</span>
 			<h1>My Own Ideas</h1>
@@ -160,7 +160,7 @@
 			</p>
 		</div>
 	</Slide>
-	<Slide slug="opinion">
+	<Slide slug="hypotheses">
 		<span class="pretitle">my own hypotheses</span>
 		<h1>Folks Pay for Real-World Impact, not Digital Tools</h1>
 		<p>
