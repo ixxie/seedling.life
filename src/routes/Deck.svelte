@@ -81,7 +81,7 @@
 <Info />
 <article
 	bind:this={element}
-	use:swipe={{ timeframe: 300, minSwipeDistance: 100, touchAction: 'scroll-y' }}
+	use:swipe={{ timeframe: 300, minSwipeDistance: 100, touchAction: 'pan-x' }}
 	on:swipe={handleSwipe}
 	on:scroll={handleScroll}
 >

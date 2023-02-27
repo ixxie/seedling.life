@@ -36,8 +36,8 @@
 		</p>
 		<ul>
 			<li>
-				<b>🗞️ <a href="#opinion">Seeding Life</a></b>: <b>support communities</b> you care about and
-				receive a <b>personalized monthly newspaper</b> in return.
+				<b>🗞️ <a href="#opinion">Seedling Life</a></b>: <b>support communities</b> you care about
+				and receive a <b>personalized monthly newspaper</b> in return.
 			</li>
 		</ul>
 	</Slide>
