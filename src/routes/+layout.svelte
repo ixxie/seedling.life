@@ -1,16 +1,11 @@
 <script>
 	import { GradientBackground } from '$lib/gradient';
+	import Fullscreen from '$lib/Fullscreen.svelte';
 	import '../app.css';
 </script>
 
 <GradientBackground />
 
-<div>
+<Fullscreen>
 	<slot />
-</div>
-
-<style>
-	div {
-		max-width: 100%;
-	}
-</style>
+</Fullscreen>
