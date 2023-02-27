@@ -16,6 +16,7 @@
 		justify-content: center;
 		flex-shrink: 0;
 		scroll-snap-align: start;
+		scroll-snap-stop: always;
 	}
 
 	article {

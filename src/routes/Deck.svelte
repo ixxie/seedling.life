@@ -94,7 +94,6 @@
 		flex-shrink: 1;
 		display: flex;
 		scroll-snap-type: x mandatory;
-		scroll-snap-stop: always !important;
 		overflow-x: scroll;
 		scroll-behavior: smooth;
 	}
