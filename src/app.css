@@ -1,11 +1,16 @@
 :root {
 	--primary-color: #14805c;
+	--primary-color-light: #a4ccbe;
 	--secondary-color: #147080;
+	--secondary-color-light: #75B2BD;
+	--tertiary-color: #DB791E;
 	--text-color: #2b2723;
 }
 
 * {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 html,
@@ -15,42 +20,173 @@ body {
 	width: 100%;
 	height: 100%;
 	font-family: League Spartan;
-	font-size: 18px;
+	font-size: 20px;
 	color: var(--text-color);
+	background-color: #eafbf5;
+	line-height: 1.3rem;
 }
 
-.pretitle {
-	text-transform: uppercase;
-	color: var(--secondary-color);
+article {
+	text-align: left;
 	width: 100%;
-	display: block;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	gap: 5rem;
+	padding: 5rem 0;
+}
+
+
+
+section {
+	width: 100%;
+	display: flex;
+	gap: 1rem;
+}
+
+section.left {
+	flex-flow: row;
+}
+
+section.right {
+	flex-flow: row-reverse;
+}
+
+@media (max-width: 1500px) {
+	section {
+		flex-flow: column !important;
+		align-items: center;
+	}
+}
+
+section div {
+	width: 600px;
+	min-width: 600px;
+	margin: 3rem
+}
+
+@media (max-width: 700px) {
+	section div {
+		width: 100%;
+		min-width: 0;
+		margin: 0;
+		padding: 1rem;	
+	}
+}
+
+/* images */
+
+figure {
+	min-height: 100%;
+}
+
+figure img {
+	object-fit: cover;
+	height: 100%;
+	min-height: 100%;
+	border: 1px solid var(--secondary-color-light);
+}
+
+section.left img {
+	border-radius: 3rem 0 0 3rem; 
+}
+
+section.right img {
+	border-radius: 0 3rem 3rem 0;
+}
+
+@media (max-width: 1500px) {
+	section.left figure {
+		margin-left: 2rem;
+	}
+
+	section.right figure {
+	  margin-right: 2rem;
+	}
+}
+
+
+img {
+  max-width: 100%;
+  column-span: none;
+	filter: blur(0.02em) saturate(0.8) contrast(1.2) brightness(1.2);
+}
+
+
+/* typeography */
+
+p {
+	margin: 1rem 0;
+}
+
+hgroup {
+	margin-top: 1.5rem;
 	text-align: center;
 }
+
+hgroup p {
+	text-transform: uppercase;
+	color: var(--secondary-color);
+	margin: 0.5rem 0 0 0;
+	font-weight: bold;
+	line-height: 1.5em;
+}
+
+hgroup span {
+	font-size: 50px;
+}
+
 
 h1,
 h2 {
-	font-family: Averia Sans Libre;
 	font-weight: 800;
-	color: var(--primary-color);
+	opacity: 0.8;
+	text-align: center;
+	line-height: 1.3em;
 }
 
 h1 {
+	font-family: Averia Sans Libre;
+	font-size: 42px;
+	color: var(--primary-color);
 	margin-top: 0.1rem;
-	font-size: 32px;
-	margin-bottom: 1rem;
-	opacity: 0.8;
 	z-index: 100;
 	width: 100%;
-	text-align: center;
 }
+
+h2 {
+	font-family: Alegreya;
+	font-size: 32px;
+	color: var(--primary-color);
+}
+ 
+@media (max-width: 700px) {
+	hgroup {
+		margin: 0 -0.5rem;
+	}
+
+	h2 {
+		font-size: 25px;
+	}
+
+	hgroup p {
+		font-size: 16px;
+	}
+}
+
+p span {
+	font-family: Averia Sans Libre;
+	color: var(--primary-color);
+}
+
 
 a {
 	color: var(--primary-color);
 }
 
 ul {
+	margin: 1rem 1rem;
 	list-style-type: none;
-	padding-left: 0.5em;
 }
 
 li:not(li:first-child) {
@@ -90,3 +226,5 @@ td ul {
 	align-items: center;
 	gap: 0.5em;
 }
+
+
