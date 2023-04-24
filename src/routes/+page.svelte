@@ -1,4 +1,5 @@
 <script lang="ts">
+	import FinancialSection from './FinancialSection.svelte';
 </script>
 
 <article>
@@ -155,8 +156,8 @@
 					to the rest of the world.
 				</li>
 				<li>
-					<b>⬇️ Prices are reasonable</b>, e.g. a 24-page tabloid costs between €1.9 and €2.81/copy
-					at 1000 copies (tax incl.).
+					<b>⬇️ Prices are reasonable</b>, e.g. a 24-page tabloid shipped globally costs max.
+					€3.10/copy starting at 2000 copies (tax incl.).
 				</li>
 				<li>
 					<b>🖨️ Inkjet technology</b> makes personalized newspaper printing economically viable.
@@ -175,18 +176,7 @@
 			<img src="https://images.unsplash.com/photo-1503694978374-8a2fa686963a" />
 		</figure>
 	</section>
-	<section class="left">
-		<div>
-			<hgroup>
-				<span>🪙</span>
-				<h2>Finances Look Promising</h2>
-				<p>to do - add financial calculation</p>
-			</hgroup>
-		</div>
-		<figure>
-			<img src="https://images.unsplash.com/photo-1580519542036-c47de6196ba5" />
-		</figure>
-	</section>
+	<FinancialSection />
 	<section class="right">
 		<div>
 			<hgroup>
