@@ -80,21 +80,6 @@ figure {
 	min-height: 100%;
 }
 
-figure img {
-	object-fit: cover;
-	height: 100%;
-	min-height: 100%;
-	border: 1px solid var(--secondary-color-light);
-}
-
-section.left img {
-	border-radius: 3rem 0 0 3rem; 
-}
-
-section.right img {
-	border-radius: 0 3rem 3rem 0;
-}
-
 @media (max-width: 1500px) {
 	section.left figure {
 		margin-left: 2rem;
@@ -105,11 +90,41 @@ section.right img {
 	}
 }
 
+figure img {
+	object-fit: cover;
+	height: 100%;
+	min-height: 100%;
+	border: 1px solid var(--secondary-color-light);
+}
 
 img {
   max-width: 100%;
   column-span: none;
-	filter: blur(0.02em) saturate(0.8) contrast(1.2) brightness(1.2);
+}
+
+section.left img {
+	border-radius: 3rem 0 0 3rem; 
+	border-right: 0;
+}
+
+section.right img {
+	border-radius: 0 3rem 3rem 0;
+	border-left: 0;
+}
+
+figure caption {
+	width: 100%;
+	opacity: 0.3;
+	padding: 0 0.5rem;
+	font-size: smaller;
+}
+
+section.left figure caption {
+	text-align: right;
+}
+
+section.right figure caption {
+	text-align: left;
 }
 
 

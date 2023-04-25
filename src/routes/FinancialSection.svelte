@@ -213,7 +213,16 @@
 		{/if}
 	</div>
 	<figure>
-		<img src="https://images.unsplash.com/photo-1580519542036-c47de6196ba5" />
+		<img
+			src="https://images.unsplash.com/photo-1580519542036-c47de6196ba5"
+			alt="Colorful currency bills of various denominations"
+		/>
+		<caption>
+			Image credit: <a href="https://unsplash.com/photos/SAYzxuS1O3M">
+				10 and one 10 dollar bill
+			</a>
+			by <a href="https://unsplash.com/@ninjason">Jason Leung</a>.
+		</caption>
 	</figure>
 </section>
 

@@ -44,7 +44,16 @@
 			</p>
 		</div>
 		<figure>
-			<img src="https://images.unsplash.com/photo-1495020689067-958852a7765e" />
+			<img
+				src="https://images.unsplash.com/photo-1495020689067-958852a7765e"
+				alt="person reading a newspaper"
+			/>
+			<caption>
+				Image credit: <a href="https://unsplash.com/photos/_Zua2hyvTBk">
+					Person reading a newspaper
+				</a>
+				by <a href="https://unsplash.com/@iamromankraft">Roman Kraft</a>.
+			</caption>
 		</figure>
 	</section>
 	<section class="right">
@@ -86,7 +95,16 @@
 			</p>
 		</div>
 		<figure>
-			<img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644" />
+			<img
+				src="https://images.unsplash.com/photo-1523240795612-9a054b0db644"
+				alt="Three men laughing while looking at a laptop inside room"
+			/>
+			<caption>
+				Image credit: <a href="https://unsplash.com/photos/XkKCui44iM0">
+					Three men laughing while looking at a laptop inside room
+				</a>
+				by <a href="https://unsplash.com/@priscilladupreez">Priscilla Du Preez</a>.
+			</caption>
 		</figure>
 	</section>
 	<section class="left">
@@ -131,7 +149,16 @@
 			</p>
 		</div>
 		<figure>
-			<img src="https://images.unsplash.com/photo-1524247108137-732e0f642303" />
+			<img
+				src="https://images.unsplash.com/photo-1524247108137-732e0f642303"
+				alt="Three people planting flowers"
+			/>
+			<caption>
+				Image credit: <a href="https://unsplash.com/photos/qo6_mo9dsYg">
+					Three people planting flowers
+				</a>
+				by <a href="https://unsplash.com/@neonbrand">Kenny Eliason</a>.
+			</caption>
 		</figure>
 	</section>
 	<section class="right">
@@ -173,7 +200,14 @@
 			</p>
 		</div>
 		<figure>
-			<img src="https://images.unsplash.com/photo-1503694978374-8a2fa686963a" />
+			<img
+				src="https://images.unsplash.com/photo-1503694978374-8a2fa686963a"
+				alt="Newspaper printing machine running"
+			/>
+			<caption>
+				Image credit: <a href="https://unsplash.com/photos/Tzm3Oyu_6sk">Print is Alive</a>
+				by <a href="https://unsplash.com/@bank_phrom">Bank Phrom</a>.
+			</caption>
 		</figure>
 	</section>
 	<FinancialSection />
@@ -222,7 +256,16 @@
 			</p>
 		</div>
 		<figure>
-			<img src="https://images.unsplash.com/photo-1617472600356-d6cc97119a0b" />
+			<img
+				src="https://images.unsplash.com/photo-1617472600356-d6cc97119a0b"
+				alt="Laptop showing code next to a vase with flowers in a lumionous space"
+			/>
+			<caption>
+				Image credit: <a href="https://unsplash.com/photos/044AnorPjAU">
+					Working on our first application in the coffee shop
+				</a>
+				by <a href="https://unsplash.com/@jexo">Jexo</a>.
+			</caption>
 		</figure>
 	</section>
 </article>
