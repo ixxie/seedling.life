@@ -60,7 +60,6 @@
 					<tr>
 						<th>Page<br />Count</th>
 						<th>Monthly<br />Subscription Fee</th>
-						<th>Total Profit<br />(before tax)</th>
 						<th>Total Profit<br />(after tax)</th>
 					</tr>
 				</thead>
@@ -79,7 +78,6 @@
 									maximumFractionDigits: 2
 								})}
 							</td>
-							<td>€{profitBeforeTax.toLocaleString('en-US', { maximumFractionDigits: 0 })}</td>
 							<td>€{profitAfterTax.toLocaleString('en-US', { maximumFractionDigits: 0 })}</td>
 						</tr>
 					{/if}
