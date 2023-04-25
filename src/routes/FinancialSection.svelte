@@ -19,16 +19,15 @@
 	let subs = 100000;
 	let vat = 22;
 
-	const countPresets = [2, 4, 6, 8, 10, 12, 14, 16, 18];
-	const pricePresets = [0.3, 0.4, 0.5, 0.6, 0.8, 1, 1.2];
+	const countPresets = [2, 4, 6, 8, 10, 12];
+	const pricePresets = [0.25, 0.5, 0.75, 1, 1.25];
 	const subPresets = [
-		{ value: 2000, label: '2K' },
+		{ value: 2500, label: '2.5K' },
+		{ value: 5000, label: '5K' },
 		{ value: 10000, label: '10K' },
-		{ value: 50000, label: '50K' },
 		{ value: 100000, label: '100K' },
 		{ value: 500000, label: '500K' },
-		{ value: 1000000, label: '1M' },
-		{ value: 10000000, label: '10M' }
+		{ value: 1000000, label: '1M' }
 	];
 	const vatPresets = [0, 16, 18, 20, 22, 24, 26];
 
@@ -157,7 +156,7 @@
 								on:click={() =>
 									(info = `
 									Since the size of the newspaper may vary depending on the subscriber's choice,
-									price needs to be set per page. The minimum page price will be €0.40, but
+									price needs to be set per page. There will be a minimum page price, but
 									subscribers may choose to raise this in order to donate more.
 							`)}
 							>
@@ -310,6 +309,7 @@
 		text-align: center;
 		font-size: smaller;
 		padding: 0;
+		opacity: 0.5;
 	}
 
 	.info {
