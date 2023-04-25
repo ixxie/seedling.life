@@ -3,7 +3,7 @@
 </script>
 
 <article>
-	<section class="left">
+	<section class="left" id="intro">
 		<div>
 			<hgroup>
 				<span>🌱</span>
@@ -42,6 +42,12 @@
 				The hope is that deep engagement could be achieved by this combination of the flexibility
 				and openness of social networks with the thoughtful rigor of the newspaper.
 			</p>
+			<menu class="mini-menu">
+				<a href="#nonprofits">nonprofit orgs</a> ·
+				<a href="#citizens">engaged citizens</a>
+				· <a href="#printing">printing</a> · <a href="#finances">finances</a> ·
+				<a href="#technology">technology</a>
+			</menu>
 		</div>
 		<figure>
 			<img
@@ -56,7 +62,7 @@
 			</caption>
 		</figure>
 	</section>
-	<section class="right">
+	<section class="right" id="nonprofits">
 		<div>
 			<hgroup>
 				<span>🏛️</span>
@@ -107,7 +113,7 @@
 			</caption>
 		</figure>
 	</section>
-	<section class="left">
+	<section class="left" id="citizens">
 		<div>
 			<hgroup>
 				<span>🧭</span>
@@ -161,7 +167,7 @@
 			</caption>
 		</figure>
 	</section>
-	<section class="right">
+	<section class="right" id="printing">
 		<div>
 			<hgroup>
 				<span>📰</span>
@@ -211,7 +217,7 @@
 		</figure>
 	</section>
 	<FinancialSection />
-	<section class="right">
+	<section class="right" id="technology">
 		<div>
 			<hgroup>
 				<span>💻</span>

@@ -245,4 +245,9 @@ td ul {
 	gap: 0.5em;
 }
 
-
+.mini-menu {
+	font-size: smaller;
+	text-align: center;
+	text-transform: uppercase;
+	padding-top: 1rem;
+}

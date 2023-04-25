@@ -32,10 +32,10 @@
 	];
 	const vatPresets = [0, 16, 18, 20, 22, 24, 26];
 
-	let info;
+	let info: string | undefined;
 </script>
 
-<section class="left">
+<section class="left" id="finances">
 	<div>
 		<hgroup>
 			<span>🪙</span>
