@@ -1,26 +1,26 @@
 <script lang="ts">
 	const rows = [
-		{ count: 12, price: 2.49 },
-		{ count: 16, price: 2.69 },
-		{ count: 20, price: 2.9 },
-		{ count: 24, price: 3.1 },
-		{ count: 28, price: 3.31 },
-		{ count: 32, price: 3.51 },
-		{ count: 36, price: 3.71 },
-		{ count: 40, price: 3.92 },
-		{ count: 44, price: 4.12 },
-		{ count: 48, price: 4.32 }
+		{ count: 12, cost: 2.49 },
+		{ count: 16, cost: 2.69 },
+		{ count: 20, cost: 2.9 },
+		{ count: 24, cost: 3.1 },
+		{ count: 28, cost: 3.31 },
+		{ count: 32, cost: 3.51 },
+		{ count: 36, cost: 3.71 },
+		{ count: 40, cost: 3.92 },
+		{ count: 44, cost: 4.12 },
+		{ count: 48, cost: 4.32 }
 	];
 	const highlighted = [12, 24, 36, 48];
 	let showAll = false;
 
 	let pageCount = 2;
-	let price = 0.8;
+	let pagePrice = 0.5;
 	let subs = 100000;
 	let vat = 22;
 
 	const countPresets = [2, 4, 6, 8, 10, 12, 14, 16, 18];
-	const pricePresets = [0.8, 1.2, 1.6, 2, 2.4];
+	const pricePresets = [0.3, 0.4, 0.5, 0.6, 0.8, 1, 1.2];
 	const subPresets = [
 		{ value: 2000, label: '2K' },
 		{ value: 10000, label: '10K' },
@@ -63,17 +63,16 @@
 						<th>Total Profit<br />(after tax)</th>
 					</tr>
 				</thead>
-				{#each rows as row}
-					{@const totalPrice = row.count * price}
-					{@const costPerSpread = (2 * row.price) / row.count}
-					{@const profitBeforeTax = (subs * (price - costPerSpread) * pageCount) / 2}
+				{#each rows as print}
+					{@const retailPrice = print.count * pagePrice}
+					{@const profitBeforeTax = subs * (retailPrice - print.cost)}
 					{@const profitAfterTax = (profitBeforeTax * (100 - vat)) / 100}
-					{@const highlight = highlighted.includes(row.count)}
+					{@const highlight = highlighted.includes(print.count)}
 					{#if highlight || showAll}
 						<tr>
-							<td>{row.count}</td>
+							<td>{print.count}</td>
 							<td>
-								€{totalPrice.toLocaleString('en-US', {
+								€{retailPrice.toLocaleString('en-US', {
 									minimumFractionDigits: 2,
 									maximumFractionDigits: 2
 								})}
@@ -168,8 +167,8 @@
 						<td>
 							<div>
 								{#each pricePresets as preset}
-									<button class:active={price == preset} on:click={() => (price = preset)}>
-										€{(preset / 2).toFixed(2)}
+									<button class:active={pagePrice == preset} on:click={() => (pagePrice = preset)}>
+										€{preset.toFixed(2)}
 									</button>
 								{/each}
 							</div>
