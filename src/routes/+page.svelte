@@ -1,5 +1,5 @@
 <script lang="ts">
-	import FinancialSection from './FinancialSection.svelte';
+	import { FinancialSection } from './finances';
 </script>
 
 <article>

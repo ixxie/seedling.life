@@ -74,6 +74,23 @@ section > div {
 	}
 }
 
+/* layout helpers */
+
+.center {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	place-content: center;
+	width: 100%;
+	overflow: visible;
+}
+
+.scrollbox {
+	overflow-x: scroll;
+	overflow-y: visible;
+}
+
+
 /* images */
 
 figure {
@@ -175,6 +192,15 @@ h2 {
 	font-size: 32px;
 	color: var(--primary-color);
 }
+
+h3 {
+	text-transform: uppercase;
+	color: var(--secondary-color);
+	text-align: center;
+	font-size: 0.95em;
+	margin-top: 1rem;
+}
+
  
 @media (max-width: 700px) {
 	hgroup {
@@ -209,10 +235,19 @@ li:not(li:first-child) {
 	padding-top: 0.5em;
 }
 
+/* tables */
+
 table {
 	border-collapse: collapse;
 	width: 100%;
-	margin: 1rem;
+	margin: 0.5rem 0;
+}
+
+th,
+td {
+	text-align: center;
+	padding: 0.2rem;
+	min-width: max-content;
 }
 
 tr {
@@ -250,4 +285,43 @@ td ul {
 	text-align: center;
 	text-transform: uppercase;
 	padding-top: 1rem;
+}
+
+/* help button */
+button {
+	background-color: #5e5e5e;
+	color: white;
+	padding: 0.1rem 0.3rem;
+	border: 0;
+	border-radius: 0.3rem;
+	opacity: 0.8;
+	font-weight: bold;
+}
+
+.help {
+	background-color: #5e5e5e;
+	width: 20px !important;
+	height: 20px !important;
+	border-radius: 10px;
+	text-align: center;
+	font-size: smaller;
+	padding: 0;
+	opacity: 0.5;
+}
+
+.info {
+	font-size: smaller;
+	background-color: white;
+	padding: 0.5rem;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	gap: 0.5rem;
+}
+
+.info button,
+.center > button {
+	height: fit-content;
+	color: #333;
+	background-color: transparent;
 }
