@@ -15,7 +15,7 @@
 				action. What if we combined the best elements of modern social networks and classic
 				newspapers?
 			</p>
-			<p>This is the <span>Seedling Life</span> concept:</p>
+			<p>This is the <span>Seedling Life</span> newspaper concept:</p>
 			<ul>
 				<li>
 					<b>🏛️ Organizations publish sections</b> of the newspaper, containing articles, events, listings
@@ -39,8 +39,12 @@
 				</li>
 			</ul>
 			<p>
-				The hope is that deep engagement could be achieved by this combination of the flexibility
-				and openness of social networks with the thoughtful rigor of the newspaper.
+				The hope is that deep engagement could be achieved by this combining the decentralization of
+				social networks with the rigor of the newspapers.
+			</p>
+			<p>
+				⚠️ Note that <b> this is an early stage nonprofit project</b>
+				. I'm currently looking for 4-5 organizations willing to participate in a pilot program.
 			</p>
 			<menu class="mini-menu">
 				<a href="#nonprofits">nonprofit orgs</a> ·
@@ -79,8 +83,8 @@
 			</p>
 			<ul>
 				<li>
-					<b>✨ Physical newspapers engage people</b> making it easier to convice them to support you
-					with donation.
+					<b>✨ Physical products engage people</b> making it easier to convice them to support you with
+					donation.
 				</li>
 				<li>
 					<b>📈 Monthly subscriptions mean continuous funding</b> removing the stress and distraction
@@ -93,6 +97,10 @@
 				<li>
 					<b>🌈 Joining forces is essential</b> since sending a newspaper alone is junk mail while sending
 					it together is a movement.
+				</li>
+				<li>
+					<b>🔎 Ink on paper increases attention</b> over pixels on a screen, allowing you to deliver
+					messages more effectively.
 				</li>
 			</ul>
 			<p>
