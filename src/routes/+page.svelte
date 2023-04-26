@@ -3,7 +3,7 @@
 </script>
 
 <article>
-	<section class="left" id="intro">
+	<section id="intro">
 		<div>
 			<hgroup>
 				<span>🌱</span>
@@ -62,7 +62,7 @@
 			</caption>
 		</figure>
 	</section>
-	<section class="right" id="nonprofits">
+	<section id="nonprofits">
 		<div>
 			<hgroup>
 				<span>🏛️</span>
@@ -113,7 +113,7 @@
 			</caption>
 		</figure>
 	</section>
-	<section class="left" id="citizens">
+	<section id="citizens">
 		<div>
 			<hgroup>
 				<span>🧭</span>
@@ -167,7 +167,7 @@
 			</caption>
 		</figure>
 	</section>
-	<section class="right" id="printing">
+	<section id="printing">
 		<div>
 			<hgroup>
 				<span>📰</span>
@@ -217,7 +217,7 @@
 		</figure>
 	</section>
 	<FinancialSection />
-	<section class="right" id="technology">
+	<section id="technology">
 		<div>
 			<hgroup>
 				<span>💻</span>

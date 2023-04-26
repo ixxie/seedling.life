@@ -10,7 +10,7 @@
 	};
 </script>
 
-<section class="left" id="finances">
+<section id="finances">
 	<div>
 		<hgroup>
 			<span>🪙</span>

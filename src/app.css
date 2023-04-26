@@ -44,11 +44,11 @@ section {
 	gap: 1rem;
 }
 
-section.left {
+article section:nth-child(odd) {
 	flex-flow: row;
 }
 
-section.right {
+article section:nth-child(even) {
 	flex-flow: row-reverse;
 }
 
@@ -98,11 +98,11 @@ figure {
 }
 
 @media (max-width: 1500px) {
-	section.left figure {
+	article > section:nth-child(odd) figure {
 		margin-left: 2rem;
 	}
 
-	section.right figure {
+	article > section:nth-child(even) figure {
 	  margin-right: 2rem;
 	}
 }
@@ -119,12 +119,12 @@ img {
   column-span: none;
 }
 
-section.left img {
+article > section:nth-child(odd) img {
 	border-radius: 3rem 0 0 3rem; 
 	border-right: 0;
 }
 
-section.right img {
+article > section:nth-child(even) img {
 	border-radius: 0 3rem 3rem 0;
 	border-left: 0;
 }
@@ -136,11 +136,11 @@ figure caption {
 	font-size: smaller;
 }
 
-section.left figure caption {
+article > section:nth-child(odd) figure caption {
 	text-align: right;
 }
 
-section.right figure caption {
+article > section:nth-child(even) figure caption {
 	text-align: left;
 }
 
