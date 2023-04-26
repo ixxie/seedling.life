@@ -1,27 +1,27 @@
 <script lang="ts">
 	const rows = [
-		{ count: 12, cost: 2.49 },
-		{ count: 16, cost: 2.69 },
-		{ count: 20, cost: 2.9 },
-		{ count: 24, cost: 3.1 },
-		{ count: 28, cost: 3.31 },
-		{ count: 32, cost: 3.51 },
-		{ count: 36, cost: 3.71 },
-		{ count: 40, cost: 3.92 },
-		{ count: 44, cost: 4.12 },
-		{ count: 48, cost: 4.32 }
+		{ pages: 12, cost: 2.49 },
+		{ pages: 16, cost: 2.69 },
+		{ pages: 20, cost: 2.9 },
+		{ pages: 24, cost: 3.1 },
+		{ pages: 28, cost: 3.31 },
+		{ pages: 32, cost: 3.51 },
+		{ pages: 36, cost: 3.71 },
+		{ pages: 40, cost: 3.92 },
+		{ pages: 44, cost: 4.12 },
+		{ pages: 48, cost: 4.32 }
 	];
 	const highlighted = [12, 24, 36, 48];
 	let showAll = false;
 
-	let pageCount = 2;
+	let sectionPages = 2;
 	let pagePrice = 0.5;
-	let subs = 100000;
+	let subscribers = 100000;
 	let vat = 22;
 
-	const countPresets = [2, 4, 6, 8, 10, 12];
-	const pricePresets = [0.25, 0.5, 0.75, 1, 1.25];
-	const subPresets = [
+	const sectionPagesPresets = [2, 4, 6, 8, 10, 12];
+	const pagePricePresets = [0.25, 0.5, 0.75, 1, 1.25];
+	const subscribersPresets = [
 		{ value: 2500, label: '2.5K' },
 		{ value: 5000, label: '5K' },
 		{ value: 10000, label: '10K' },
@@ -32,6 +32,12 @@
 	const vatPresets = [0, 16, 18, 20, 22, 24, 26];
 
 	let info: string | undefined;
+	let calculation: string | undefined;
+	const fmtLarge = (n: number) => n.toLocaleString('en-US', { maximumFractionDigits: 0 });
+	const fmtSmall = (n: number) =>
+		n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+	const fmtDetailed = (n: number) =>
+		n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 3 });
 </script>
 
 <section class="left" id="finances">
@@ -45,7 +51,7 @@
 		<p>
 			The prices offered by <a href="https://printnewspaper.com">printnewspaper.com</a> vary depending
 			on the page count, size and circulation of the newspaper. I made a preliminary calculation focused
-			on the smaller tabloid format under reasonable scenarios.
+			on the smaller tabloid format under reasonable scenarios. For more info, click the help buttons.
 		</p>
 		<h3>How much could you make?</h3>
 		<p>
@@ -53,45 +59,97 @@
 			believe this shows the potential for this platform to generate significant funds for
 			paritcipating organizations.
 		</p>
-		<div class="scrollbox">
-			<table id="outputs">
-				<thead>
-					<tr>
-						<th>Page<br />Count</th>
-						<th>Monthly<br />Subscription Fee</th>
-						<th>Total Profit<br />(after tax)</th>
-					</tr>
-				</thead>
-				{#each rows as print}
-					{@const retailPrice = print.count * pagePrice}
-					{@const profitBeforeTax = subs * (retailPrice - print.cost)}
-					{@const profitAfterTax = (profitBeforeTax * (100 - vat)) / 100}
-					{@const highlight = highlighted.includes(print.count)}
-					{#if highlight || showAll}
+		{#if !calculation}
+			<div class="scrollbox">
+				<table id="outputs">
+					<thead>
 						<tr>
-							<td>{print.count}</td>
-							<td>
-								€{retailPrice.toLocaleString('en-US', {
-									minimumFractionDigits: 2,
-									maximumFractionDigits: 2
-								})}
-							</td>
-							<td>€{profitAfterTax.toLocaleString('en-US', { maximumFractionDigits: 0 })}</td>
+							<th>Page<br />Count</th>
+							<th>Monthly<br />Subscription Fee</th>
+							<th>Total Profit<br />(after tax)</th>
+							<th />
 						</tr>
-					{/if}
-				{/each}
-			</table>
-		</div>
-		<div class="center">
-			<button on:click={() => (showAll = !showAll)}
-				>{showAll ? '- show less' : '+ show more'}</button
-			>
-		</div>
+					</thead>
+					{#each rows as print}
+						{@const retailPrice = print.pages * pagePrice}
+						{@const totalProfitBeforeTax = subscribers * (retailPrice - print.cost)}
+						{@const shareOfProfit = sectionPages / print.pages}
+						{@const profitBeforeTax = totalProfitBeforeTax * shareOfProfit}
+						{@const profitAfterTax = (profitBeforeTax * (100 - vat)) / 100}
+						{@const highlight = highlighted.includes(print.pages)}
+						{#if highlight || showAll}
+							<tr>
+								<td>{print.pages}</td>
+								<td>
+									€{fmtSmall(retailPrice)}
+								</td>
+								<td>€{fmtLarge(profitAfterTax)}</td>
+								<td>
+									<button
+										class="help"
+										on:click={() =>
+											(calculation = `<b>Calculation</b> - profit from publishing a <b>${sectionPages} page section</b> in a
+											<b>${print.pages} page tabloid</b> at a <b>€${pagePrice} page price</b> and <b>${vat}% VAT</b>:
+											<p>
+												<b>Retail Price</b><br/>
+												&nbsp;&nbsp;= Page Count x Page Price <br/>
+												&nbsp;&nbsp;= ${print.pages} x €${fmtSmall(pagePrice)}
+										  	= <b>€${fmtSmall(retailPrice)}</b><br/>
+											</p>
+											<p>
+												<b>Total Profit Before Tax</b><br/>
+												&nbsp;&nbsp;= Subscribers x (Retail Price - Printing Cost) <br/>
+												&nbsp;&nbsp;= 
+												${fmtLarge(subscribers)} x (€${fmtSmall(retailPrice)} - €${fmtSmall(print.cost)}) =
+												${fmtLarge(subscribers)} x €${fmtSmall(retailPrice - print.cost)}
+										  	= <b>€${fmtLarge(totalProfitBeforeTax)}</b><br/>
+											</p>
+											<p>
+												<b>Share of Profit</b><br/>
+												&nbsp;&nbsp;= (Section Page Count / Total Page Count) x 100%<br/>
+										  	&nbsp;&nbsp;= (${sectionPages} / ${print.pages}) x 100%
+												= ${fmtDetailed(sectionPages / print.pages)} x 100%
+												= <b>${fmtSmall(shareOfProfit * 100)}%</b><br/>
+											</p>
+											<p>
+												<b>Organization Profit Before Tax</b><br/>
+												&nbsp;&nbsp;= Total Profit Before Tax x Share of Profit<br/>
+										  	&nbsp;&nbsp;= €${fmtLarge(totalProfitBeforeTax)} x ${fmtSmall(shareOfProfit * 100)}%
+										  	= <b>€${fmtLarge(profitBeforeTax)}</b><br/>
+											</p>
+											<p>
+												<b>Organization Profit Afer Tax</b><br/>
+												&nbsp;&nbsp;= Organization Profit Before Tax x (100 - VAT)%<br/>
+										  	&nbsp;&nbsp;= €${fmtLarge(profitBeforeTax)} x (100 - ${fmtSmall(vat)})%
+										  	= €${fmtLarge(profitBeforeTax)} x ${fmtSmall(100 - vat)}%
+										  	= <b>€${fmtLarge(profitAfterTax)}</b><br/>
+											</p>
+											
+										`)}
+									>
+										❔
+									</button>
+								</td>
+							</tr>
+						{/if}
+					{/each}
+				</table>
+			</div>
+			<div class="center">
+				<button on:click={() => (showAll = !showAll)}
+					>{showAll ? '- show less' : '+ show more'}</button
+				>
+			</div>
+		{:else if calculation}
+			<div class="info">
+				<p>
+					ℹ️ {@html calculation}
+				</p>
+				<button on:click={() => (calculation = undefined)}>🗙</button>
+			</div>
+		{/if}
 		<h3>settings</h3>
-		<p>
-			These settings allow you to explore different scenarios. Click the info buttons for more
-			details.
-		</p>
+		<p>These settings allow you to explore different scenarios.</p>
 		<div class="center">
 			<div class="scrollbox">
 				<table id="inputs">
@@ -111,10 +169,10 @@
 						</td>
 						<td>
 							<div>
-								{#each subPresets as preset}
+								{#each subscribersPresets as preset}
 									<button
-										class:activeSub={subs == preset.value}
-										on:click={() => (subs = preset.value)}
+										class:activeSub={subscribers == preset.value}
+										on:click={() => (subscribers = preset.value)}
 									>
 										{preset.label}
 									</button>
@@ -140,8 +198,11 @@
 						</td>
 						<td>
 							<div>
-								{#each countPresets as preset}
-									<button class:active={pageCount == preset} on:click={() => (pageCount = preset)}>
+								{#each sectionPagesPresets as preset}
+									<button
+										class:active={sectionPages == preset}
+										on:click={() => (sectionPages = preset)}
+									>
 										{preset}
 									</button>
 								{/each}
@@ -165,7 +226,7 @@
 						</td>
 						<td>
 							<div>
-								{#each pricePresets as preset}
+								{#each pagePricePresets as preset}
 									<button class:active={pagePrice == preset} on:click={() => (pagePrice = preset)}>
 										€{preset.toFixed(2)}
 									</button>
