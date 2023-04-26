@@ -87,6 +87,7 @@
 								<td>
 									<button
 										class="help"
+										aria-label="show calculation"
 										on:click={() =>
 											(calculation = `<b>Calculation</b> - profit from publishing a <b>${sectionPages} page section</b> in a
 											<b>${print.pages} page tabloid</b> at a <b>€${pagePrice} page price</b> and <b>${vat}% VAT</b>:
@@ -145,7 +146,9 @@
 				<p>
 					ℹ️ {@html calculation}
 				</p>
-				<button on:click={() => (calculation = undefined)}>🗙</button>
+				<button on:click={() => (calculation = undefined)} aria-label="close calculation">
+					✖️
+				</button>
 			</div>
 		{/if}
 		<h3>settings</h3>
@@ -158,6 +161,7 @@
 							📈 Subscriptions
 							<button
 								class="help"
+								aria-label="show info"
 								on:click={() =>
 									(info = `
 									Subscription count depends on how many people follow and support your
@@ -185,6 +189,7 @@
 							📄 Section Size
 							<button
 								class="help"
+								aria-label="show info"
 								on:click={() =>
 									(info = `
 									As a publishing organization, you may choose to publish different amounts of
@@ -214,6 +219,7 @@
 							🪙 Page Price
 							<button
 								class="help"
+								aria-label="show info"
 								on:click={() =>
 									(info = `
 									Since the size of the newspaper may vary depending on the subscriber's choice,
@@ -239,6 +245,7 @@
 							>🏦 VAT
 							<button
 								class="help"
+								aria-label="show info"
 								on:click={() =>
 									(info = `
 								Some common VAT rates to calculate profit after tax.
@@ -265,7 +272,7 @@
 				<p>
 					ℹ️ {info}
 				</p>
-				<button on:click={() => (info = undefined)}>🗙</button>
+				<button on:click={() => (info = undefined)} aria-label="close info">✖️</button>
 			</div>
 		{/if}
 	</div>
