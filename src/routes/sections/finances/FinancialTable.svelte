@@ -69,8 +69,8 @@
 						<td>
 							€{fmtSmall(results.retailPrice)}
 						</td>
-						<td>€{fmtLarge(results.profitAfterTax)}</td>
-						<td>
+						<td
+							>€{fmtLarge(results.profitAfterTax)}
 							<button class="help" aria-label="show calculation" on:click={() => (calc = results)}>
 								❔
 							</button>
@@ -124,10 +124,9 @@
 			</p>
 			<p>
 				<b>Organization Profit Afer Tax</b><br />
-				= Organization Profit Before Tax x (100 - VAT)%<br />
-				= €{fmtLarge(calc.profitBeforeTax)} x (100 - {fmtSmall(params.vat)})% = €{fmtLarge(
-					calc.profitBeforeTax
-				)} x {fmtSmall(100 - params.vat)}%<br />
+				= Org. Profit Before Tax x (100 - VAT)%<br />
+				= €{fmtLarge(calc.profitBeforeTax)} x (100 - {fmtSmall(params.vat)})%<br />
+				= €{fmtLarge(calc.profitBeforeTax)} x {fmtSmall(100 - params.vat)}%<br />
 				= <b>€{fmtLarge(calc.profitAfterTax)}</b>
 			</p>
 		</div>

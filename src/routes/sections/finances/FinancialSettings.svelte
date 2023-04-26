@@ -41,7 +41,7 @@
 					<div>
 						{#each presets.subscribers as preset}
 							<button
-								class:activeSub={params.subscribers == preset.value}
+								class:active={params.subscribers == preset.value}
 								on:click={() => (params.subscribers = preset.value)}
 							>
 								{preset.label}
@@ -150,12 +150,12 @@
 		margin: 0 0.3rem;
 	}
 
-	button.active {
-		background-color: var(--secondary-color);
+	button {
+		background-color: #808080;
 	}
 
-	button.activeSub {
-		background-color: var(--primary-color);
+	button.active {
+		background-color: var(--secondary-color);
 	}
 
 	#inputs td {
