@@ -86,7 +86,7 @@ section > div {
 }
 
 .scrollbox {
-	overflow-x: scroll;
+	overflow-x: auto;
 	overflow-y: visible;
 }
 
@@ -130,7 +130,9 @@ article > section:nth-child(even) img {
 }
 
 figure caption {
+	display: block;
 	width: 100%;
+	min-width: 100%;
 	opacity: 0.3;
 	padding: 0 0.5rem;
 	font-size: smaller;
@@ -247,6 +249,7 @@ th,
 td {
 	text-align: center;
 	padding: 0.2rem;
+	width: max-content;
 	min-width: max-content;
 }
 

@@ -23,8 +23,8 @@
 	<div class="scrollbox">
 		<table id="inputs">
 			<tr>
+				<td> 📈 Subscriptions </td>
 				<td>
-					📈 Subscriptions
 					<button
 						class="help"
 						aria-label="show info"
@@ -51,8 +51,8 @@
 				</td>
 			</tr>
 			<tr>
+				<td> 📄 Section Size </td>
 				<td>
-					📄 Section Size
 					<button
 						class="help"
 						aria-label="show info"
@@ -81,8 +81,8 @@
 				</td>
 			</tr>
 			<tr>
+				<td> 🪙 Page Price </td>
 				<td>
-					🪙 Page Price
 					<button
 						class="help"
 						aria-label="show info"
@@ -110,8 +110,8 @@
 				</td>
 			</tr>
 			<tr>
-				<td
-					>🏦 VAT
+				<td>🏦 VAT </td>
+				<td>
 					<button
 						class="help"
 						aria-label="show info"
@@ -146,6 +146,10 @@
 {/if}
 
 <style>
+	.help {
+		margin: 0 0.3rem;
+	}
+
 	button.active {
 		background-color: var(--secondary-color);
 	}
@@ -154,20 +158,13 @@
 		background-color: var(--primary-color);
 	}
 
-	#inputs {
-		width: 100%;
-	}
-
-	#inputs td {
-		width: max-content;
-	}
-
 	#inputs td {
 		font-weight: bold;
 		text-transform: uppercase;
 		padding: 0;
 		text-align: left;
 		font-size: smaller;
+		white-space: nowrap;
 	}
 
 	#inputs div {

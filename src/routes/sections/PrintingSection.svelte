@@ -12,7 +12,7 @@
 		</p>
 		<ul>
 			<li>
-				<b>🌲 The paper sustainable</b> and sourced 50% from recycled paper and 50% from sustainable
+				<b>🌲 The paper is sustainable</b> and sourced 50% from recycled paper and 50% from sustainable
 				forestry in France.
 			</li>
 			<li>
