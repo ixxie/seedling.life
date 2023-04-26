@@ -285,6 +285,7 @@ td ul {
 	text-align: center;
 	text-transform: uppercase;
 	padding-top: 1rem;
+	max-width: 350px;
 }
 
 /* help button */

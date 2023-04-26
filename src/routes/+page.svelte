@@ -5,6 +5,7 @@
 		CitizensSection,
 		PrintingSection,
 		FinancialSection,
+		TeamSection,
 		TechnologySection
 	} from './sections';
 </script>
@@ -15,5 +16,6 @@
 	<CitizensSection />
 	<PrintingSection />
 	<FinancialSection />
+	<TeamSection />
 	<TechnologySection />
 </article>

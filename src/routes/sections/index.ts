@@ -4,3 +4,4 @@ export { default as CitizensSection } from './CitizensSection.svelte';
 export { default as PrintingSection } from './PrintingSection.svelte';
 export { FinancialSection } from './finances';
 export { default as TechnologySection } from './TechnologySection.svelte';
+export { default as TeamSection } from './TeamSection.svelte';

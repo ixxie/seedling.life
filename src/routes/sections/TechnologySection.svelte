@@ -32,7 +32,7 @@
 			<li>
 				<b>🛠️ No-nonsense stack</b> that is modern, proven, and easy for developers to grasp:
 				<ul>
-					<li>✅ Svelte/Kit, TypeScript, Supabase</li>
+					<li>✅ Svelte/Kit, TypeScript, Supabase, Pandoc</li>
 					<li>⛔ Blockchain, Esoteric Languages, Closed Dependencies</li>
 				</ul>
 			</li>
