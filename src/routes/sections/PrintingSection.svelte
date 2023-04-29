@@ -12,8 +12,8 @@
 		</p>
 		<ul>
 			<li>
-				<b>🌲 The paper is sustainable</b> and sourced 50% from recycled paper and 50% from sustainable
-				forestry in France.
+				<b>🌲 The paper seems sustainable</b> and sourced 50% from recycled paper and 50% from certified
+				forestry in Europe.
 			</li>
 			<li>
 				<b>✉️ Shipping to around 40 countries</b> is included, and I plan to figure out a way to ship
@@ -34,6 +34,11 @@
 			The company seems promising and support was helpful when I inquired about this concept. If
 			there are issues, we could always replace or supplement their service with other printing
 			presses.
+		</p>
+		<p>
+			Assessing the impact of paper-based communication vs. digital communication is very difficult.
+			Still believe digital is the way to go? We will offer the option to receive the newspaper in
+			digital form for those who prefer it.
 		</p>
 	</div>
 	<figure>

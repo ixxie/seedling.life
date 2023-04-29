@@ -149,4 +149,8 @@
 		margin-top: 0;
 		break-inside: avoid;
 	}
+
+	#outputs td {
+		white-space: nowrap;
+	}
 </style>

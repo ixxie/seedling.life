@@ -3,40 +3,41 @@
 		<hgroup>
 			<span>🧭</span>
 			<h2>Engaged Citizens Deserve<br />A Simple Way to Participate</h2>
-			<p>Real Civic Discourse and Activism,<br />Without the Social Media Bullshit</p>
+			<p>Positive Civic Engagement,<br />Without the Social Media Bullshit</p>
 		</hgroup>
 		<p>
 			As citizens we care about a sustainable future, and about being part of a meaninful community.
-			But the contemporary civil society landscape doesn't make it easy to participate.
+			But modern life is overwhelming, and trying to keep up with everything is hard.
 		</p>
 		<p>
 			What could <span>Seedling Life</span> offer you?
 		</p>
 		<ul>
 			<li>
+				<b>🔭 Discover communities and organizations</b> you care about in the local and global sustainability
+				scene.
+			</li>
+			<li>
+				<b>💚 Support multiple causes with one donation</b> since your subscription will crowdfund
+				<i>all</i> the projects you follow.
+			</li>
+			<li>
 				<b>🌴 Get unplugged but stay connected</b> with a relaxing monthly newspaper instead of daily
 				social media binges.
 			</li>
 			<li>
-				<b>🔭 Discover and follow communities</b> you care about in the local and global sustainability
-				scene.
+				<b>📅 Keep up without stress</b> with a personalized event schedule listing events from your
+				favorite communities and organizations.
 			</li>
 			<li>
-				<b>📅 Keep up with events</b> with a personalized event schedule listing events from your favorite
-				communities.
-			</li>
-			<li>
-				<b>📝 Engage mindfully</b> by writing thoughtful letters instead of reactive comments in polarized
-				threads.
-			</li>
-			<li>
-				<b>💚 Give your support</b> with your subscription fees, which crowdfund all the communities
-				you follow..
+				<b>📝 Engage mindfully</b> by writing thoughtful
+				<a href="https://en.wikipedia.org/wiki/Letter_to_the_editor">letters to the editor</a> instead
+				of reactive comments in polarized threads.
 			</li>
 		</ul>
 		<p>
-			Staying engaged should cause us anxiety. We shouldn't have to stay glued to a screen or keep
-			track of dozens of donations to make a difference. Let's make participation simple!
+			Staying engaged shouldn't cause us anxiety. We shouldn't have to stay glued to a screen or
+			keep track of dozens of donations to make a difference. Let's make participation simple!
 		</p>
 	</div>
 	<figure>

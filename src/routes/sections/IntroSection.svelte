@@ -17,11 +17,11 @@
 				and other content.
 			</li>
 			<li>
-				<b>👍 Follow organizations you care about</b> from local and global sustainability communities
+				<b>👍 You follow organizations you care about</b> from local and global sustainability communities
 				and networks.
 			</li>
 			<li>
-				<b>📰 Receive a personalized newspaper</b> printed and mailed to your home based on the organizations
+				<b>📰 You receive a personalized newspaper</b> printed and mailed to your home based on the organizations
 				you follow.
 			</li>
 			<li>
@@ -33,10 +33,6 @@
 				over quantity.
 			</li>
 		</ul>
-		<p>
-			The hope is that deep engagement could be achieved by this combining the decentralization of
-			social networks with the rigor of the newspapers.
-		</p>
 		<p>
 			⚠️ Note that <b> this is an early stage nonprofit project</b>
 			. I'm currently looking for 4-5 organizations willing to participate in a pilot program.

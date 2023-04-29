@@ -2,7 +2,7 @@
 	<div>
 		<hgroup>
 			<span>🏛️</span>
-			<h2>Let's Make Nonprofit<br />Organizations Great Again</h2>
+			<h2>Nonprofit Organizations<br />Deserve More Support</h2>
 			<p>Stop Worrying About Funding<br />& Focus on Your Impact</p>
 		</hgroup>
 		<p>
@@ -19,8 +19,7 @@
 				donation.
 			</li>
 			<li>
-				<b>📈 Monthly subscriptions mean continuous funding</b> removing the stress and distraction of
-				grant applications.
+				<b>📈 Monthly subscriptions mean continuous funding</b> can help alleviate grant applications.
 			</li>
 			<li>
 				<b>💰 Subscription fees are not capped</b> allowing subscribers - inlcuding foundations - to

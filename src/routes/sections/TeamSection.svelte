@@ -12,13 +12,14 @@
 				alt="Portrait of Matan Bendix Shenhav with tree tops and the sky in the background"
 			/>
 			My name is Matan Bendix Shenhav, I'm a web developer and designer based in the EU. I'm a generalist
-			with a broad skillset. I'm passionate about discovering and engaging with community and sustainability
-			orientated culture, and about supporting and evolving our civic institutions.
+			with a broad skillset. You can read more about me, my skills and my experience on
+			<a href="https://shenhav.fyi">my professional site</a>.
 		</p>
+
 		<p>
-			You can read more about me and my skills on <a href="https://shenhav.fyi"
-				>my professional site</a
-			>.
+			I'm passionate about discovering and engaging with community and sustainability orientated
+			culture, but find it challenging to do in practice. I've been trying to figure out how to help
+			evolve institutions to enable a more sustainable culture.
 		</p>
 		<h3>Interested in cofounding or<br /> advising a nonprofit startup?</h3>
 		<p>
