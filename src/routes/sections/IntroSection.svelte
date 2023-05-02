@@ -61,3 +61,13 @@
 		</caption>
 	</figure>
 </section>
+
+<style>
+	menu {
+		font-size: smaller;
+		text-align: center;
+		text-transform: uppercase;
+		padding-top: 1rem;
+		max-width: 350px;
+	}
+</style>

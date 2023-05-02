@@ -1,6 +1,5 @@
 <script lang="ts">
-	import FinancialSettings from './FinancialSettings.svelte';
-	import FinancialTable from './FinancialTable.svelte';
+	import FinancialCalculator from './FinancialCalculator.svelte';
 
 	let params = {
 		sectionPages: 2,
@@ -14,24 +13,15 @@
 	<div>
 		<hgroup>
 			<span>🪙</span>
-			<h2>Finances Look Promising</h2>
-			<p>Try the Interactive Calculator</p>
+			<h2>Forecast Your Profit</h2>
+			<p>With the Interactive Calculator</p>
 		</hgroup>
 		<p>
-			The prices offered by <a href="https://printnewspaper.com">printnewspaper.com</a> vary depending
-			on the page count, size and circulation of the newspaper. I made a preliminary calculation focused
-			on the smaller tabloid format under reasonable scenarios. For more info, click the help buttons.
+			Calculating profit from publishing in <span>Seedling Life</span> depends on a variety of
+			factors. This interactive calculator forecasts the profits for your organization. You can
+			explore various scenarios and adjust the settings to suit your expectations.
+			<FinancialCalculator />
 		</p>
-		<h3>How much could you make?</h3>
-		<p>
-			The following is an estimate of the profit for each participating organization seperately. I
-			believe this shows the potential for this platform to generate significant funds for
-			paritcipating organizations.
-		</p>
-		<FinancialTable {params} />
-		<h3>settings</h3>
-		<p>These settings allow you to explore different scenarios.</p>
-		<FinancialSettings bind:params />
 	</div>
 	<figure>
 		<img
